@@ -17,6 +17,8 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/thing/thing.socket').register(socket);
+  require('../api/geopoint/geopoint.socket').register(socket);
 
 }
 
