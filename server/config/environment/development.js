@@ -6,7 +6,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/meansand-dev'
+    uri: 'mongodb://localhost:27017/meansand-dev'
   },
 
   // Seed database on startup
