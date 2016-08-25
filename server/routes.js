@@ -9,6 +9,7 @@ import path from 'path';
 
 export default function(app) {
   // Insert routes below
+  app.use('/api/geopoints', require('./api/geopoint'));
   app.use('/api/users', require('./api/user'));
   app.use('/api/things', require('./api/thing'));
   app.use('/auth', require('./auth').default);
