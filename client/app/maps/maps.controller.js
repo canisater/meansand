@@ -3,9 +3,21 @@
 (function(){
 
 class MapsComponent {
-  constructor() {
-    this.message = 'Hello';
-  }
+  	constructor($scope) {
+    	this.$scope = $scope;
+  	}
+
+
+	$onInit(){
+		angular.extend(this.$scope,	{
+			center: {
+				lat:51.0,
+				lng:-1.5,
+				zoom: 10
+			 }
+		});
+		console.log('here');
+	}
 }
 
 angular.module('meansandApp')
