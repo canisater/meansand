@@ -2,7 +2,7 @@
 
 angular.module('meansandApp', ['meansandApp.auth', 'meansandApp.admin', 'meansandApp.constants',
     'ngCookies', 'ngResource', 'ngSanitize', 'btford.socket-io', 'ui.router', 'ui.bootstrap',
-    'validation.match'
+    'validation.match', 'leaflet-directive'
   ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');

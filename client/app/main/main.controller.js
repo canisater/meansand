@@ -4,8 +4,9 @@
 
   class MainController {
 
-    constructor($http, $scope, socket) {
+    constructor($http, $scope, $state, socket) {
       this.$http = $http;
+      this.$state = $state;
       this.socket = socket;
       this.awesomeThings = [];
 
@@ -20,6 +21,11 @@
           this.awesomeThings = response.data;
           this.socket.syncUpdates('thing', this.awesomeThings);
         });
+    }
+
+    maps() {
+      console.log('AAAA');
+      this.$state.go('maps');
     }
 
     addThing() {
