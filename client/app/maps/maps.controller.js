@@ -3,6 +3,7 @@
 (function(){
 
 class MapsComponent {
+
   	constructor($scope) {
     	this.$scope = $scope;
   	}
@@ -18,6 +19,9 @@ class MapsComponent {
 		});
 		console.log('here');
 	}
+
+	
+
 }
 
 angular.module('meansandApp')
