@@ -10,14 +10,7 @@ class MapsComponent {
 
 
 	$onInit(){
-		angular.extend(this.$scope,	{
-			center: {
-				lat:51.0,
-				lng:-1.5,
-				zoom: 10
-			 }
-		});
-		console.log('here');
+		var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 	}
 
 	
