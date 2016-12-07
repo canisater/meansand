@@ -4,23 +4,24 @@
 
 class MapsComponent {
 
-  	constructor($scope) {
-    	this.$scope = $scope;
-  	}
+  constructor($scope) {
+    this.$scope = $scope;
+	}
 
 
 	$onInit(){
-		angular.extend(this.$scope,	{
-			center: {
-				lat:51.0,
-				lng:-1.5,
-				zoom: 10
-			 }
-		});
-		console.log('here');
+		var mymap = L.map('mapid').setView([51.0, -1.5], 11);
+
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mymap);
+    var marker = L.marker([51.0, -1.5]).addTo(mymap);
+
+    mymap.on('click', this.onMapClick);
+
 	}
 
-	
+  onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+  }
 
 }
 
